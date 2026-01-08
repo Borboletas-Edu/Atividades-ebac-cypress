@@ -9,7 +9,7 @@ describe('Tela de cadastro', () => {
     
     beforeEach(() => {
         cy.setCookie('ebacStoreVersion', 'v2', { domain: 'lojaebac.ebaconline.art.br' })
-        cy.visit('/')
+        cy.visit('http://lojaebac.ebaconline.art.br')
         inicioPage.selecionarAba('Account')
         loginPage.acessarCriarConta()
     });

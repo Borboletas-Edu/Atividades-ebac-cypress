@@ -25,6 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import inicioPage from "./pageObjects/inicioPage";
 import loginPage from "./pageObjects/loginPage";
+require('@reportportal/agent-js-cypress/lib/commands/reportPortalCommands');
 
 Cypress.Commands.add('fazerLogin', (email, senha) => { 
     cy.setCookie('ebacStoreVersion', 'v2', { domain: 'lojaebac.ebaconline.art.br' })
