@@ -1,0 +1,11 @@
+1 - Faça uma busca de quantos livros não estão com o status publicado e pageCount menor que 300 
+{status:{$ne:'PUBLISH'},pageCount:{$lt:300}}
+
+2 - Faça uma busca de livros que contém as palavras MongoDB e SQL Server no título 
+{title:{$regex:'(?=.*MongoDB)(?=.*SQL Server)',$options:'i'}}
+
+3 -  Faça uma busca com expressão regular onde ISBN começa com 18 
+{isbn:{$regex:'^18'}}
+
+4 -  Usando Expressão Regular, busque livros que contém a palavra JAVA ou Mobile na descrição do livro (LongDescription)
+{longDescription:{$regex:'(java|mobile)',$options:'i'}}
